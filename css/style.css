@@ -1,0 +1,28 @@
+.allProjects-section{
+  position: absolute;
+  float: right;
+  right: 20px;
+}
+
+.table-section{
+  background-color: green;
+}
+
+.table-section table {
+  border: 1px solid black;
+}
+
+.box-width{
+  width: 1130px;
+}
+
+.titlebar{
+  height: 40px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.titlebar input{
+  display: inline-block;
+}
