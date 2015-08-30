@@ -16,7 +16,7 @@
       <div class="titlebar row">
           <input type="text" placeholder="Client ID">
           <select class="combobox">
-            <option value="Company Name">FlexOS</option>
+            <option value="Company Name">Company Name</option>
           </select>
           <select class="combobox">
             <option value="Email">Email</option>
