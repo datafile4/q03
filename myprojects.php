@@ -1,3 +1,7 @@
+<?php
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,8 +24,15 @@
         <a href="#" type="submit" class="btn btn-information">Behind Schedule</a>
       </div>
       <div class="row">
+        <?php
+          $myProjects = array(0=>array('#'=>0,'project'=>'Web-design','client'=>'Open client','deadline'=>'30-04-2015','progress' =>6,'my-time'=>'20-43-10','my_tasks'=>'9','status'=>'In progress'));
+        ?>
         <table class="table table-striped col-md-12">
-          <thead>
+          <?php
+            include("functions.inc");
+            createTable($myProjects);
+          ?>
+          <!-- <thead>
             <th>#</th>
             <th>Project</th>
             <th>Client</th>
@@ -62,7 +73,7 @@
                 In Progress
               </td>
             </tr>
-          </tbody>
+          </tbody> -->
         </table>
       </div>
   </div>
