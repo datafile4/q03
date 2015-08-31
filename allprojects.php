@@ -9,6 +9,7 @@
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.css" style="text/css">
     <!-- <link rel="stylesheet" href="css/style.css" style="text/css"> -->
+        <!-- <link rel="stylesheet" href="css/style.css" style="text/css"> -->
     <link rel="stylesheet" href="css/font-awesome.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +40,7 @@
             <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
             <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
             <th>Deadline</th>
-            <th><a href="#"> Progress <i class="fa fa-sort"></a></th>
+            <th><a href="#"> Progress <i class="fa fa-sort"></i></a></th>
             <th>MyTime</th>
             <th>Status</th>
     	   	  <th><i class="fa fa-bars"></i></th>
