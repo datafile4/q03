@@ -21,7 +21,12 @@
             <th>Team Members</th>
             <th><i class="fa fa-bars"></i></th>
           </thead>
-          <tbody>
+          <?php
+            include_once("functions.inc");
+            $manage_groups_array = array(0=>array('id'=>0,'group_name'=>'Loosers','team_members'=>1,'groups'=>array('Permission','Migrate','Kefir')));
+            manageGroupsTable($manage_groups_array);
+          ?>
+          <!-- <tbody>
             <tr>
               <td>
                 1
@@ -48,7 +53,7 @@
                 <span class="label label-danger">Delete Group</span>
               </td>
             </tr>
-          </tbody>
+          </tbody> -->
         </table>
       </div>
       <div class="row" id="addButton-section">

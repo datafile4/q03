@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -27,41 +31,19 @@
       <div class="table-section row">
         <table class="table table-striped">
           <thead>
-            <th>Pic</th>
             <th><a href="#">ID<i class="fa fa-sort"></i></a></th>
             <th><a href="#">Company Name<i class="fa fa-sort"></i></a></th>
             <th><a href="#">Main Contact<i class="fa fa-sort"></i></a></th>
             <th>Telephone</th>
-            <th><a href="#">Project<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Projects<i class="fa fa-sort"></i></a></th>
             <th><i class="fa fa-bars"></i></th>
           </thead>
-          <tbody>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                Open Demo Inc
-              </td>
-              <td>
-                Main Contact
-              </td>
-              <td>
-                John Connor
-              </td>
-              <td>
-                45-145-48-45
-              </td>
-              <td>
-                1
-              </td>
-              <td>
-                <button type="button" class="btn btn-xs btn-danger">
-                    <i class="fa fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
+
+          <?php
+            include("functions.inc");
+            $clientsArray = array(0=>(array('id'=>0,'company_name'=>'open demo','main_contact'=>'Flex','telephone'=>'4243','projects'=>1)));
+            createClientsTable($clientsArray);
+          ?>
         </table>
       </div>
   </div>

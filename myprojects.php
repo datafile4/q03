@@ -28,21 +28,22 @@
           $myProjects = array(0=>array('#'=>0,'project'=>'Web-design','client'=>'Open client','deadline'=>'30-04-2015','progress' =>6,'my-time'=>'20-43-10','my_tasks'=>'9','status'=>'In progress'));
         ?>
         <table class="table table-striped col-md-12">
+          <thead>
+           <th>#</th>
+           <th>Project</th>
+           <th>Client</th>
+           <th>Deadline</th>
+           <th>Progress</th>
+           <th>MyTime</th>
+           <th>MyTask</th>
+           <th>Status</th>
+         </thead>
           <?php
-            include("functions.inc");
-            createTable($myProjects);
+            include_once("functions.inc");
+            createMyProjectsTable($myProjects);
           ?>
-          <!-- <thead>
-            <th>#</th>
-            <th>Project</th>
-            <th>Client</th>
-            <th>Deadline</th>
-            <th>Progress</th>
-            <th>MyTime</th>
-            <th>MyTask</th>
-            <th>Status</th>
-          </thead>
-          <tbody>
+           
+          <!--<tbody>
             <tr>
               <td>
                 1

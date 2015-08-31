@@ -26,3 +26,34 @@
 .titlebar input{
   display: inline-block;
 }
+
+
+/* common style */
+.positionRel {
+  position:relative;
+}
+.marginAuto {
+  margin:0 auto;
+}
+/* common style */
+
+.loginPage {
+  width:500px;
+  height:380px;
+  top:100px;
+}
+.usernameLoginInput {
+  width:450px;
+  top:60px;
+}
+.passwordLoginInput {
+  width:450px;
+  top:90px;
+}
+.loginButtons {
+  left:25px;
+  top:100px;
+}
+.loginFooter {
+  top:187px;
+}
