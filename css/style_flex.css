@@ -1,0 +1,93 @@
+.main {
+	margin:5px 5px 5px 200px;
+}
+.myMargin {
+	margin-top:5px;
+
+}
+.face {
+		font-size: 35px;
+}
+
+/*top menu*/
+.topMenu {
+	/*background-color: #BDBDBD;*/
+	/*height: 50px;*/
+}
+
+.logo {
+	/*background-color: green;*/
+	/*height: 50px;*/
+}
+
+.userMenu {
+	/*background-color: lime;*/
+	/*height: 40px;*/
+}
+/*top menu*/
+
+/*welcome menu*/
+.welcomeTxt {
+	/*background-color: #D4D4D4;*/
+	/*height: 50px;*/
+}
+
+.userPhoto {
+	/*background-color: pink;*/
+	/*height: 40px;*/
+}
+
+.privelige {
+	/*background-color: pink;*/
+	/*height: 40px;*/
+}
+/*welcome menu*/
+
+/*welcome menu*/
+.review {
+	/*background-color: yellow;*/
+	height: 115px;
+}
+.rewIco {
+	font-size: 35px;
+}
+
+.thumb {
+	background-color: #B0CCFF;
+	/*height: 90px;*/
+}
+/*welcome menu*/
+
+/*detail menu*/
+
+.detailed {
+	/*background-color: green;*/
+	/*height: 600px;*/
+}
+.detail{
+	/*background-color: blue;*/
+	/*height: 600px;*/
+}
+
+.myTaskStatus{
+	/*background-color: lime;*/
+	height: 300px;
+
+}
+
+#taskList2 {
+ 	height: 75%;
+    margin-bottom: 0;
+    overflow: auto;
+}
+.myTaskChar{
+	/*background-color: pink;*/
+	height: 300px;
+}
+
+.taskOne{
+	/*background-color: pink;*/
+	height: 615px;
+}
+
+/*detail menu*/
