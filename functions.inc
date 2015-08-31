@@ -89,4 +89,51 @@ function manageGroupsTable($array){
   echo "</tbody>";
   }
 }
+
+function createMyTimersTable($array){
+  echo "<tbody>";
+  foreach ($array as $key => $value) {
+    $contents = $value;
+    echo "<tr>";
+    foreach ($contents as $key => $value) {
+      echo "<td>$value</td>";
+    }
+    echo "<td>";
+      echo "<button type=\"button\" class=\"btn btn-md btn-success\">";
+      echo  "Start My Timer";
+      echo   "</button>";
+    echo "</td>";
+    echo "<td>";
+      echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo "<i class=\"fa fa fa-refresh\"></i>";
+      echo "</button>";
+      echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo "<i class=\"fa fa-pencil-square-o\"></i>";
+      echo "</button>";
+    echo "</td>";
+    echo "</tr>";
+  echo "</tbody>";
+  }
+}
+
+function createMyTasksTable($array){
+  echo "<tbody>";
+  foreach ($array as $key => $value) {
+    $contents = $value;
+    echo "<tr>";
+    foreach ($contents as $key => $value) {
+      echo "<td>$value</td>";
+    }
+    echo "<td>";
+    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo "<i class=\"fa fa fa-refresh\"></i>";
+    echo "</button>";
+    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo "<i class=\"fa fa-pencil-square-o\"></i>";
+    echo "</button>";
+    echo "</td>";
+    echo "</tr>";
+    echo "</tbody>";
+}
+}
 ?>
