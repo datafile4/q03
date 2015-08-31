@@ -1,17 +1,18 @@
 <?php
+  //function for generate table in myprojects page
   function createMyProjectsTable($array){
     echo "<tbody>";
-    foreach ($array as $key => $value) {
-      $contents = $value;
+    foreach ($array as $key => $value) {//key is user id
+      $contents = $value;//contents - fields of db
       echo "<tr>";
-      foreach ($contents as $key => $value) {
+      foreach ($contents as $key => $value) { //value  - content of field
         echo "<td>$value</td>";
       }
       echo "</tr>";
     echo "</tbody>";
   }
 }
-
+//function for generate table in allprojects page
 function createAllProjectsTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -28,7 +29,7 @@ function createAllProjectsTable($array){
     echo "</tbody>";
   }
 }
-
+//function for generate table in clients page
 function createClientsTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -46,6 +47,7 @@ function createClientsTable($array){
   echo "</tbody>";
   }
 }
+//function for generate table in teammambers page
 function createTMTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -54,21 +56,20 @@ function createTMTable($array){
     foreach ($contents as $key => $value) {
       echo "<td>$value</td>";
     }
-
-
+    //create last column with buttons
   echo "<td>";
-  echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-  echo  "<i class=\"fa fa-pencil\"></i>";
-  echo   "</button>";
-  echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-  echo "<i class=\"fa fa-trash\"></i>";
-  echo "</button>";
+    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo  "<i class=\"fa fa-pencil\"></i>";
+    echo   "</button>";
+    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+      echo "<i class=\"fa fa-trash\"></i>";
+    echo "</button>";
   echo "</td>";
   echo "</tr>";
   echo "</tbody>";
   }
 }
-
+//generate table in managegroups page
 function manageGroupsTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -89,7 +90,7 @@ function manageGroupsTable($array){
   echo "</tbody>";
   }
 }
-
+//generate table in mytimers page
 function createMyTimersTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -103,6 +104,7 @@ function createMyTimersTable($array){
       echo  "Start My Timer";
       echo   "</button>";
     echo "</td>";
+    //generate last column, that contains two buttons
     echo "<td>";
       echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
       echo "<i class=\"fa fa fa-refresh\"></i>";
@@ -115,7 +117,7 @@ function createMyTimersTable($array){
   echo "</tbody>";
   }
 }
-
+//function for generate table in mytasks page
 function createMyTasksTable($array){
   echo "<tbody>";
   foreach ($array as $key => $value) {
@@ -124,6 +126,7 @@ function createMyTasksTable($array){
     foreach ($contents as $key => $value) {
       echo "<td>$value</td>";
     }
+    //generate last column, that contains two buttons
     echo "<td>";
     echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
       echo "<i class=\"fa fa fa-refresh\"></i>";
@@ -134,6 +137,6 @@ function createMyTasksTable($array){
     echo "</td>";
     echo "</tr>";
     echo "</tbody>";
-}
+  }
 }
 ?>

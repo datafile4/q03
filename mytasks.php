@@ -47,54 +47,6 @@
             include_once("functions.inc");
             createMyTasksTable($my_tasks_array);
           ?>
-          <!-- <thead>
-            <th>#</th>
-            <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
-            <th>Deadline</th>
-            <th><a href="#"> Progress <i class="fa fa-sort"></a></th>
-            <th>MyTime</th>
-            <th>MyTask</th>
-            <th>Status</th>
-    	   	  <th><i class="fa fa-bars"></i></th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                Complete Web Desingn
-              </td>
-              <td>
-                Open Demo
-              </td>
-              <td>
-                16-09-2015
-              </td>
-              <td>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                        60%
-                      </div>
-                  </div>
-              </td>
-              <td>
-                02:25:45
-              </td>
-              <td>
-                9
-              </td>
-              <td>
-                In Progress
-              </td>
-              <td>
-                <button type="button" class="btn btn-xs btn-danger">
-                	<i class="fa fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody> -->
         </table>
       </div>
   </div>
