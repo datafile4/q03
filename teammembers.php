@@ -39,7 +39,12 @@
             <th>Last Active</th>
             <th><i class="fa fa-bars"></i></th>
           </thead>
-          <tbody>
+          <?php
+            include_once("functions.inc");
+            $tm_array = array(0=>array('pic'=>'#','full_name'=>'Fred Marks','group'=>'administrator','telephone'=>'210-829-1278','email_address'=>'admin@nextloop.net','job_title'=>'manager','last_active'=>'2015-08-31 05:11:26'));
+            createTMTable($tm_array);
+          ?>
+          <!-- <tbody>
             <tr>
               <td>
                 <img src="" alt="" />
@@ -75,7 +80,7 @@
                 </button>
               </td>
             </tr>
-          </tbody>
+          </tbody> -->
         </table>
       </div>
   </div>

@@ -1,3 +1,7 @@
+<?php
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,6 +35,22 @@
       <div class="table-section row">
         <table class="table table-striped">
           <thead>
+            <th>#</th>
+            <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
+            <th>Deadline</th>
+            <th><a href="#"> Progress <i class="fa fa-sort"></a></th>
+            <th>MyTime</th>
+            <th>Status</th>
+    	   	  <th><i class="fa fa-bars"></i></th>
+          </thead>
+          <?php
+            $allProjectsArray = array(0=>array('#'=>1,'project_title'=>'Web Design','client_name'=>'Open Demo','deadline'=>'2015',
+            'progress'=>8,'time_spent'=>'02:45','status'=>'In Progress'));
+            include_once("functions.inc");
+            createAllProjectsTable($allProjectsArray);
+          ?>
+          <!-- <thead>
             <th>#</th>
             <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
             <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
@@ -77,7 +97,7 @@
                 </button>
               </td>
             </tr>
-          </tbody>
+          </tbody> -->
         </table>
       </div>
   </div>

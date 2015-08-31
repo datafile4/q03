@@ -37,7 +37,12 @@
             <th><a href="#">Status<i class="fa fa-sort"></i></a></th>
             <th><i class="fa fa-bars"></i></th>
           </thead>
-          <tbody>
+          <!-- <?php
+            $allClientsArray = array(0=>array('id'=>0,'project_title'=>'Open Skynet','client_name'=>'John Connor','deadline'=>'2060','progress'=>6,'time_spent'=>'02:45:45','status'=>'In progress'));
+            include("functions.inc");
+            createAllProjectsTable($allClientsArray);
+          ?> -->
+          <!-- <tbody>
             <tr>
               <td>
                 1
@@ -66,7 +71,7 @@
                 </button>
               </td>
             </tr>
-          </tbody>
+          </tbody> -->
         </table>
       </div>
   </div>
