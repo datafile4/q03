@@ -68,4 +68,25 @@ function createTMTable($array){
   echo "</tbody>";
   }
 }
+
+function manageGroupsTable($array){
+  echo "<tbody>";
+  foreach ($array as $key => $value) {
+    $contents = $value;
+    echo "<tr>";
+    foreach ($contents as $key => $value) {
+      if (gettype($value)=='array'){
+        $labels = $value;
+        echo "<td>";
+        foreach ($labels as $key => $value) {
+          echo "<span class=\"label label-success\">$value</span>";
+        }
+        echo "</td>";
+      } else
+      echo "<td>$value</td>";
+    }
+    echo "</tr>";
+  echo "</tbody>";
+  }
+}
 ?>
