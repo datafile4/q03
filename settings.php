@@ -6,21 +6,20 @@ error_reporting(E_ALL);
 <html>
 
 	<head>
-		<title>All Project Tasks</title>
+		<meta charset="UTF-8">
+		<title>Settings</title>
 		<script src="jquery/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style_flex.css">
-		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-
-	<!-- Account info -->
-<?php include 'myAccount.php'; ?>
-<!-- Account Info -->
+		<!-- Account info -->
+		<?php include 'myAccount.php'; ?>
+		<!-- Account Info -->
 		<!-- Main section -->
 		<div class="boxWidth container">
 
@@ -36,7 +35,7 @@ error_reporting(E_ALL);
 								<button type="button" class="btn btn-default"><a href="allprojecttasks.php"><i class="fa fa-list-ul"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="mytimers.php"><i class="fa fa-clock-o"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="managegroups.php"><i class="fa fa-sitemap"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
+								<button type="button" class="btn btn-default active"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
 							</div>
 						</div>
 						<!-- //Sidebar menu -->
@@ -60,7 +59,7 @@ error_reporting(E_ALL);
 				<div class="panel panel-primary">
 					<!-- main_heading -->
 					<div class="panel-heading">
-							<span class="panel-title" class="sectionName"><i class="fa fa-list-ul"></i> All Project Tasks</span>
+							<span class="panel-title" class="sectionName"><i class="fa fa-wrench"></i> Settings</span>
 
 						<!-- panel_menu -->
 						<span class="col-md-offset-8">
@@ -69,7 +68,7 @@ error_reporting(E_ALL);
 								<button type="button" class="btn btn-default"><a href="mytimers.php"><i class="fa fa-clock-o"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="mytasks.php"><i class="fa fa-list-ul"></i></a></button>
 								<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default"><a href="#"><i class="fa fa-cogs"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
+								<button type="button" class="btn btn-default active"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-power-off"></i></a></button>
 							</div>
 						</span>
@@ -80,62 +79,114 @@ error_reporting(E_ALL);
 
 					<div class="panel-body">
 
-						<div class=" well well-sm">
-							<div class="input-group pull-left">
-								<input type="text" class="form-control" placeholder="Task title" aria-describedby="basic-addon1">
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Assigned to <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Assigned to</a></li>
-								</ul>
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Project Home <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Project Home</a></li>
-								</ul>
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Task Status <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Task Status</a></li>
-								</ul>
-							</div>
-							<button type="submit" class="btn btn-primary">Search My Tasks</button>
-						</div>
+
 
 
 						<!-- Detailed section -->
 						<div class="well well-sm detailed col-md-12 ">
-								<div class="table-section">
-			        <table class="table table-striped">
-          <thead>
-            <th>#</th>
-            <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
-            <th>Deadline</th>
-            <th><a href="#"> Progress <i class="fa fa-sort"></i></a></th>
-            <th>MyTime</th>
-            <th>Status</th>
-    	   	  <th><i class="fa fa-bars"></i></th>
-          </thead>
-          <?php
-            $allProjectsArray = array(0=>array('#'=>1,'project_title'=>'Web Design','client_name'=>'Open Demo','deadline'=>'2015',
-            'progress'=>80,'time_spent'=>'02:45','status'=>'In Progress'));
-            include_once("functions.inc");
-            createAllProjectsTable($allProjectsArray);
-          ?>
-        </table>
+		<!-- created tab -->
+	<div class="">
+ 			<ul class="nav nav-tabs">
+    			<li class="active"><a data-toggle="tab" href="#home">General</a></li>
+    			<li><a data-toggle="tab" href="#menu1">Company</a></li>
+    			<li><a data-toggle="tab" href="#menu2">Updates</a></li>
+    			<li><a data-toggle="tab" href="#menu3">Email templates</a></li>
+			</ul>
+
+		<div class="tab-content">
+
+			<div id="home" class="tab-pane fade in active">
+				<h3>General Settings</h3><hr>
+					<table class="table table-hover">
+ 						<tr>
+ 							<td>Item</td>
+ 							<td>Value</td>
+ 						</tr>
+ 						<tr>
+ 							<td>Dashboard Title</td>
+ 							<td><input type="text" class="form-control textInput" placeholder="Text input"></td>
+ 						</tr>
+ 						<tr>
+ 							<td>Show Information Tip</td>
+ 							<td>
+ 							<!-- dropdown -->
+ 								<div class="dropdown  dropDownSize">
+									<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									No<span class="caret"></span>
+									</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    										<li><a href="#">No</a></li>
+    										<li><a href="#">Yes</a></li>
+										</ul>
+								</div>
+							<!-- dropdown -->
+ 							</td>
+ 						</tr>
+					</table>
+			</div>
+
+
+			<div id="menu1" class="tab-pane fade">
+				<h3>Company Details</h3><hr>
+					<table class="table table-hover">
+						<tr>
+							<td>Item</td>
+							<td>Value</td>
+						</tr>
+						<tr>
+							<td>System Email*</td>
+							<td><input type="text" class="form-control textInput" placeholder="you@somecompnay.ccc"></td>
+						</tr>
+						<tr>
+							<td>City</td>
+							<td><input type="text" class="form-control textInput" placeholder="Some city"></td>
+						</tr>
+						<tr>
+							<td>Telephone</td>
+							<td><input type="text" class="form-control textInput" placeholder="000000000"></td>
+						</tr>
+						<tr>
+							<td>Company Name*</td>
+							<td><input type="text" class="form-control textInput" placeholder="Some Company Inc"></td>
+						</tr>
+						<tr>
+							<td>Email Signature*</td>
+							<td><input type="text" class="form-control textInput" placeholder="Text"></td>
+						</tr>
+					</table>
+			</div>
+
+
+			<div id="menu2" class="tab-pane fade">
+				<h3>Updates</h3><hr>
+					<table class="table table-hover">
+						<tr>
+							<td><b>Your Version</b></td>
+							<td><b>Latest Version</b></td>
+						</tr>
+						<tr>
+							<td>1.05</td>
+							<td>---</td>
+						</tr>
+					</table>
+			</div>
+
+
+			<div id="menu3" class="tab-pane fade">
+				<h3>Email templates(clients)</h3>
+				<button type="button" class="positionRel buttonClientTemp btn btn-primary">Client Templates</button>
+				<button type="button" class="positionRel buttonAdminTemp btn btn-success">Admin Template</button><hr>
+			</div>
 		</div>
+		</div>
+
+
+		<!-- created tab -->
 						</div>
 					</div>
+					</div>
+					</div>
+					</div>
+					</body>
 			<!-- //Main section -->
-		</body>
 	</html>

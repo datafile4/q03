@@ -28,9 +28,9 @@
 						<div class="text-center">
 							<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default"><a href="allprojecttasks.php"><i class="fa fa-list-ul"></i></a></button>
-								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-clock-o"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="mytimers.php"><i class="fa fa-clock-o"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="managegroups.php"><i class="fa fa-sitemap"></i></a></button>
-								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-wrench"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
 							</div>
 						</div>
 						<!-- //Sidebar menu -->
@@ -55,18 +55,18 @@
 					<!-- main_heading -->
 					<div class="panel-heading">
 							<span class="panel-title" class="sectionName"><i class="fa fa-home"></i> Dashboard</span>
-
+						<!-- panel_menu -->
 						<span class="col-md-offset-8">
 							<div class="btn-group" role="group" aria-label="...">
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-folder-open-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-clock-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-list-ul"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="myprojects.php"><i class="fa fa-folder-open-o"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="mytimers.php"><i class="fa fa-clock-o"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="mytasks.php"><i class="fa fa-list-ul"></i></a></button>
 								<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default"><a href="#"><i class="fa fa-cogs"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-wrench"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
 								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-power-off"></i></a></button>
 							</div>
 						</span>
-
+						<!-- panel_menu -->
 					</div>
 					<!-- //main_heading -->
 
