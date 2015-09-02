@@ -18,31 +18,28 @@
   <body>
     <div class="col-md-8 col-md-offset-4">
       <div class="titlebar row">
-          <input type="text" placeholder="Client ID">
           <select class="combobox">
-            <option value="Company Name">Company Name</option>
+            <option value="Timer Status">Timer Status</option>
           </select>
           <select class="combobox">
-            <option value="Email">Email</option>
+            <option value="Project Name">Project Name</option>
           </select>
-          <button type="submit" class="btn btn-primary">Search Clients</button>
-          <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>Add new Clients</button>
+          <button type="submit" class="btn btn-primary">Search Timers</button>
       </div>
       <div class="table-section row">
         <table class="table table-striped">
           <thead>
-            <th><a href="#">ID<i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Company Name<i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Main Contact<i class="fa fa-sort"></i></a></th>
-            <th>Telephone</th>
-            <th><a href="#">Projects<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Project<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Name<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Time<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Start/Stop<i class="fa fa-sort"></i></a></th>
             <th><i class="fa fa-bars"></i></th>
           </thead>
 
           <?php
             include("functions.inc");
-            $clientsArray = array(0=>(array('id'=>0,'company_name'=>'open demo','main_contact'=>'Flex','telephone'=>'4243','projects'=>1)));
-            createClientsTable($clientsArray);
+            $my_project_timers_array = array(0=>(array('project_name'=>0,'name'=>'Fred Marks','Time'=>'0 : 10 : 52')));
+            createMyTimersTable($my_project_timers_array);
           ?>
         </table>
       </div>

@@ -1,15 +1,9 @@
 .main {
-	/*margin:5px 5px 5px 200px;*/
-	margin-top:5px;
-	margin-right:5px;
-	margin-bottom:5px;
+	margin:5px 5px 5px 200px;
 }
 .myMargin {
 	margin-top:5px;
 
-}
-.panel-height {
-	    height: 55px;
 }
 .face {
 		font-size: 35px;
@@ -77,44 +71,23 @@
 
 .myTaskStatus{
 	/*background-color: lime;*/
-	height: 555px;
+	height: 300px;
 
-}
-#task2 {
-	height:490px;
-	overflow:auto;
 }
 
 #taskList2 {
- 	height: 430px;
+ 	height: 75%;
     margin-bottom: 0;
     overflow: auto;
 }
 .myTaskChar{
 	/*background-color: pink;*/
-	height: 200px;
+	height: 300px;
 }
 
 .taskOne{
 	/*background-color: pink;*/
-	height: 555px;
+	height: 615px;
 }
 
 /*detail menu*/
-
-
-
-/* new_changes */
-
-.mySideBar {
-	position: fixed;
-	width: 250px;
-/*	 height:96.6%;*/
-	margin:5px;
-	/*line-height: 50px;*/
-
-
-}
-.boxWidth {
-	width:1600px;
-}
