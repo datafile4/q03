@@ -1,139 +1,80 @@
-<!doctype html>
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-?>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css" style="text/css">
+    <!-- <link rel="stylesheet" href="css/style.css" style="text/css"> -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-	<head>
-		<title>All Project Tasks</title>
-		<script src="jquery/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style_flex.css">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-
-	<!-- Account info -->
-<?php include 'myAccount.php'; ?>
-<!-- Account Info -->
-		<!-- Main section -->
-		<div class="boxWidth container">
-
-		<!-- Sidebar -->
-				<div class="mySideBar panel panel-primary">
-					<div class="panel-heading panel-height">
-						<h3 class="panel-title text-center " style="margin-top:8px">Freelance Dashboard</h3>
-					</div>
-					<div class="panel-body">
-						<!-- Sidebar menu -->
-						<div class="text-center">
-							<div class="btn-group" role="group" aria-label="...">
-								<button type="button" class="btn btn-default active"><a href="allprojecttasks.php"><i class="fa fa-list-ul"></i></a></button>
-								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-clock-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="managegroups.php"><i class="fa fa-sitemap"></i></a></button>
-								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-wrench"></i></a></button>
-							</div>
-						</div>
-						<!-- //Sidebar menu -->
-
-						<!-- Sidebar sections -->
-						<div class="list-group myMargin">
-							<a href="index.php" class="list-group-item"><i class="fa fa-home"></i><span class="col-md-offset-1">Dashboard</span></a>
-							<a href="myprojects.php" class="list-group-item"><i class="fa fa-folder-open-o"></i><span class="col-md-offset-1">My Projects</span><span class="badge progress-bar-info">4</span></a>
-							<a href="allprojects.php" class="list-group-item"><i class="fa fa-folder-open"></i><span class="col-md-offset-1">All Projects</span><span class="badge progress-bar-info">4</span></a>
-							<a href="clients.php" class="list-group-item"><i class="fa fa-user"></i><span class="col-md-offset-1">Clients</span><span class="badge progress-bar-info">4</span></a>
-							<a href="teammembers.php" class="list-group-item"><i class="fa fa-users"></i><span class="col-md-offset-1">Team Members</span></a>
-						</div>
-						<!-- //Sidebar sections -->
-					</div>
-				</div>
-		<!-- //Sidebar -->
-
-			<!-- Section space -->
-			<div class="main col-md-offset-2">
-
-				<div class="panel panel-primary">
-					<!-- main_heading -->
-					<div class="panel-heading">
-							<span class="panel-title" class="sectionName"><i class="fa fa-list-ul"></i> All Project Tasks</span>
-
-						<span class="col-md-offset-8">
-							<div class="btn-group" role="group" aria-label="...">
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-folder-open-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-clock-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-list-ul"></i></a></button>
-								<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default"><a href="#"><i class="fa fa-cogs"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-wrench"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="#"><i class="fa fa-power-off"></i></a></button>
-							</div>
-						</span>
-
-					</div>
-					<!-- //main_heading -->
-
-					<div class="panel-body">
-
-						<div class=" well well-sm">
-							<div class="input-group pull-left">
-								<input type="text" class="form-control" placeholder="Task title" aria-describedby="basic-addon1">
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Assigned to <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Assigned to</a></li>
-								</ul>
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Project Home <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Project Home</a></li>
-								</ul>
-							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Task Status <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Task Status</a></li>
-								</ul>
-							</div>
-							<button type="submit" class="btn btn-primary">Search My Tasks</button>
-						</div>
-
-
-						<!-- Detailed section -->
-						<div class="well well-sm detailed col-md-12 ">
-								<div class="table-section">
-			        <table class="table table-striped">
+  <body>
+    <div class="col-md-8 col-md-offset-4">
+      <div class="titlebar row">
+          <input type="text" placeholder="Task Title">
+          <select class="combobox">
+            <option value="Assigned To">Assigned To</option>
+          </select>
+          <select class="combobox">
+            <option value="Project Home">Project Home</option>
+          </select>
+          <select class="combobox">
+            <option value="Task Status">Task Status</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Search My Tasks</button>
+      </div>
+      <div class="table-section row">
+        <table class="table table-striped">
           <thead>
-            <th>#</th>
-            <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
-            <th>Deadline</th>
-            <th><a href="#"> Progress <i class="fa fa-sort"></i></a></th>
-            <th>MyTime</th>
-            <th>Status</th>
-    	   	  <th><i class="fa fa-bars"></i></th>
+            <th><a href="#">Task ID<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Project ID<i class="fa fa-sort"></i></a></th>
+            <th>Title</th>
+            <th>Assigned</th>
+            <th><a href="#">Date Due<i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Status<i class="fa fa-sort"></i></a></th>
+            <th><i class="fa fa-bars"></i></th>
           </thead>
-          <?php
-            $allProjectsArray = array(0=>array('#'=>1,'project_title'=>'Web Design','client_name'=>'Open Demo','deadline'=>'2015',
-            'progress'=>8,'time_spent'=>'02:45','status'=>'In Progress'));
-            include_once("functions.inc");
-            createAllProjectsTable($allProjectsArray);
-          ?>
+          <!-- <?php
+            $allClientsArray = array(0=>array('id'=>0,'project_title'=>'Open Skynet','client_name'=>'John Connor','deadline'=>'2060','progress'=>6,'time_spent'=>'02:45:45','status'=>'In progress'));
+            include("functions.inc");
+            createAllProjectsTable($allClientsArray);
+          ?> -->
+          <!-- <tbody>
+            <tr>
+              <td>
+                1
+              </td>
+              <td>
+                <a href="#">Open Demo Inc</a>
+              </td>
+              <td>
+                Eminem new single
+              </td>
+              <td>
+                Eminem and Dr.Dre
+              </td>
+              <td>
+                12-05-95
+              </td>
+              <td>
+                <button type="button"class="btn btn-danger btn-sm">Behind</button>
+              </td>
+              <td>
+                <button type="button"class="btn btn-xs btn-info">
+                  <i class="fa fa-pencil"></i>
+                </button>
+                <button type="button" class="btn btn-xs btn-danger">
+                    <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody> -->
         </table>
-		</div>
-						</div>
-					</div>
-			<!-- //Main section -->
-		</body>
-	</html>
+      </div>
+  </div>
+
+  </body>
+</html>
