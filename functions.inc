@@ -5,7 +5,22 @@
       $contents = $value;
       echo "<tr>";
       foreach ($contents as $key => $value) {
-        echo "<td>$value</td>";
+        if($key=='progress')
+        {
+        echo "<td>
+                <div class=\"progress\">
+                  <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"$value\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: $value%;\">
+                  $value%
+                  </div>
+                </div>
+              </td>";
+        }else {
+          if($key=='client'){
+            echo "<td><span class=\"label label-primary\">$value</span></td>";
+          }else{
+            echo "<td>$value</td>";
+          }
+        }
       }
       echo "</tr>";
     echo "</tbody>";
@@ -18,7 +33,18 @@ function createAllProjectsTable($array){
     $contents = $value;
     echo "<tr>";
     foreach ($contents as $key => $value) {
-      echo "<td>$value</td>";
+       if($key=='progress')
+        {
+        echo "<td>
+                <div class=\"progress\">
+                  <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"$value\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: $value%;\">
+                  $value%
+                  </div>
+                </div>
+              </td>";
+        }else {
+        echo "<td>$value</td>";
+        }
     }
     echo "<td>";
       echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">

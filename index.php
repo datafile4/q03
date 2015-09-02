@@ -11,9 +11,10 @@
 	</head>
 	<body>
 
-	<!-- Account info -->
+<!-- Account info -->
 <?php include 'myAccount.php'; ?>
 <!-- Account Info -->
+
 		<!-- Main section -->
 		<div class="boxWidth container">
 
@@ -28,7 +29,7 @@
 							<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default"><a href="allprojecttasks.php"><i class="fa fa-list-ul"></i></a></button>
 								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-clock-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-user"></i></a></button>
+								<button type="button" class="btn btn-default"><a href="managegroups.php"><i class="fa fa-sitemap"></i></a></button>
 								<button type="button" class="btn btn-default"><a href=""><i class="fa fa-wrench"></i></a></button>
 							</div>
 						</div>
@@ -36,7 +37,7 @@
 
 						<!-- Sidebar sections -->
 						<div class="list-group myMargin">
-							<a href="index.html" class="list-group-item active"><i class="fa fa-home"></i><span class="col-md-offset-1">Dashboard</span></a>
+							<a href="index.php" class="list-group-item active"><i class="fa fa-home"></i><span class="col-md-offset-1">Dashboard</span></a>
 							<a href="myprojects.php" class="list-group-item"><i class="fa fa-folder-open-o"></i><span class="col-md-offset-1">My Projects</span><span class="badge progress-bar-info">4</span></a>
 							<a href="allprojects.php" class="list-group-item"><i class="fa fa-folder-open"></i><span class="col-md-offset-1">All Projects</span><span class="badge progress-bar-info">4</span></a>
 							<a href="clients.php" class="list-group-item"><i class="fa fa-user"></i><span class="col-md-offset-1">Clients</span><span class="badge progress-bar-info">4</span></a>
@@ -53,7 +54,7 @@
 				<div class="panel panel-primary">
 					<!-- main_heading -->
 					<div class="panel-heading">
-							<span class="panel-title" class="sectionName"><i class="fa fa-home"></i> My Dashboard</span>
+							<span class="panel-title" class="sectionName"><i class="fa fa-home"></i> Dashboard</span>
 
 						<span class="col-md-offset-8">
 							<div class="btn-group" role="group" aria-label="...">
@@ -73,7 +74,7 @@
 
 						<div class=" well well-sm">
 							<div class="userName ">
-								<i class="fa fa-user"></i> Username<span class="label label-danger pull-right">Box width</span>
+								<img src="imgs/1.jpg" height="37" width="37" class="img-circle"alt=""> <strong>Username</strong><span class="label label-danger col-md-offset-10">Box width</span>
 							</div>
 						</div>
 
