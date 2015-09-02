@@ -1,4 +1,4 @@
-<?php
+<?php //display errors
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
 ?>
@@ -42,7 +42,7 @@
             include_once("functions.inc");
             createMyProjectsTable($myProjects);
           ?>
-           
+
           <!--<tbody>
             <tr>
               <td>
