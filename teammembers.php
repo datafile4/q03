@@ -82,33 +82,17 @@ error_reporting(E_ALL);
 
 						<div class=" well well-sm">
 							<div class="input-group pull-left">
-								<input type="text" class="form-control" placeholder="Project ID" aria-describedby="basic-addon1">
+								<input type="text" class="form-control" placeholder="Full Name" aria-describedby="basic-addon1">
 							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Project title <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Project title</a></li>
-								</ul>
+							<div class="input-group pull-left">
+								<input type="text" class="form-control" placeholder="Group Name" aria-describedby="basic-addon1">
 							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Client Company Name <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Client Company Name</a></li>
-								</ul>
+							<div class="input-group pull-left">
+								<input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
 							</div>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Task Status <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Task Status</a></li>
-								</ul>
-							</div>
-							<button type="submit" class="btn btn-primary">Search My Tasks</button>
+							<button type="submit" class="btn btn-primary">Search</button>
+							<button type="submit" class="btn btn-success">Add Team Member</button>
+							<button type="submit" class="btn btn-primary">Manage Groups</button>
 						</div>
 
 

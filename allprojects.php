@@ -32,10 +32,10 @@ error_reporting(E_ALL);
 						<!-- Sidebar menu -->
 						<div class="text-center">
 							<div class="btn-group" role="group" aria-label="...">
-								<button type="button" class="btn btn-default"><a href="allprojecttasks.php"><i class="fa fa-list-ul"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="mytimers.php"><i class="fa fa-clock-o"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="managegroups.php"><i class="fa fa-sitemap"></i></a></button>
-								<button type="button" class="btn btn-default"><a href="settings.php"><i class="fa fa-wrench"></i></a></button>
+								<a href="allprojecttasks.php" class="btn btn-default" role="button"><i class="fa fa-list-ul"></i></a>
+								<a href="mytimers.php" class="btn btn-default"><i class="fa fa-clock-o"></i></a>
+								<a href="managegroups.php" class="btn btn-default"><i class="fa fa-sitemap"></i></a>
+								<a href="settings.php"  class="btn btn-default"><i class="fa fa-wrench"></i></a>
 							</div>
 						</div>
 						<!-- //Sidebar menu -->
