@@ -122,4 +122,4 @@ error_reporting(E_ALL);
 					</div>
 			<!-- //Main section -->
 		</body>
-	</html>
+</html>
