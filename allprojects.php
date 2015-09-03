@@ -118,11 +118,11 @@ error_reporting(E_ALL);
 			        <table class="table table-striped">
           <thead>
             <th>#</th>
-            <th><a href="#">Full Name <i class="fa fa-sort"></i></a></th>
-            <th><a href="#">Client <i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Project Title <i class="fa fa-sort"></i></a></th>
+            <th><a href="#">Client Name<i class="fa fa-sort"></i></a></th>
             <th>Deadline</th>
             <th><a href="#"> Progress <i class="fa fa-sort"></i></a></th>
-            <th>MyTime</th>
+            <th>Time Spent</th>
             <th>Status</th>
     	   	  <th><i class="fa fa-bars"></i></th>
           </thead>
