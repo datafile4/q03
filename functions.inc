@@ -10,10 +10,12 @@
     echo "Shit<br>";
   }
   $connectdb = mysqli_select_db($connection,$dbname);//select database on host
-  
+
   //function for generate table in myprojects page
   function createMyProjectsTable($array){
     echo "<tbody>";
+    global $connection;
+    $dbselect = "SELECT ";
     foreach ($array as $key => $value) {//key is user id
       $contents = $value;//contents - fields of db
       echo "<tr>";
@@ -68,45 +70,51 @@ function createAllProjectsTable(){
   echo "</tbody>";
 }
 //function for generate table in clients page
-function createClientsTable($array){
+function createClientsTable(){
+  global $connection;
+  $dbselect = "SELECT client_id, company_name, main_contact, telephone, projects FROM clients";//query for select data from database
+  $sql = mysqli_query($connection,$dbselect);//query
+  echo mysqli_error($connection);
   echo "<tbody>";
-  foreach ($array as $key => $value) {
-    $contents = $value;
+  while ($row = mysqli_fetch_array($sql)){//for each row in database
     echo "<tr>";
-    foreach ($contents as $key => $value) {
-      echo "<td>$value</td>";
-    }
-    echo "<td>";
-    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-    echo  "<i class=\"fa fa-trash\"></i>";
-    echo   "</button>";
-    echo "</td>";
+    echo "<td>".$row['client_id']."</td>";
+    echo "<td>".$row['company_name']."</td>";
+    echo "<td>".$row['main_contact']."</td>";
+    echo "<td>".$row['telephone']."</td>";
+    echo "<td>".$row['projects']."</td>";
+    echo "<td><button type=\"button\" class=\"btn btn-xs btn-danger\"><i class=\"fa fa-trash\"></i></button></td>";
     echo "</tr>";
-  echo "</tbody>";
   }
+  echo "</tbody>";
+
 }
 //function for generate table in teammambers page
-function createTMTable($array){
-  echo "<tbody>";
-  foreach ($array as $key => $value) {
-    $contents = $value;
-    echo "<tr>";
-    foreach ($contents as $key => $value) {
-      echo "<td>$value</td>";
-    }
-    //create last column with buttons
-  echo "<td>";
-    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-      echo  "<i class=\"fa fa-pencil\"></i>";
-    echo   "</button>";
-    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-      echo "<i class=\"fa fa-trash\"></i>";
-    echo "</button>";
-  echo "</td>";
-  echo "</tr>";
-  echo "</tbody>";
-  }
-}
+// function createTMTable($array){
+//   echo "<tbody>";
+//   global $connection;
+//   $dbselect = "SELECT client_id, company_name, main_contact, telephone, projects FROM clients";//query for select data from database
+//   $sql = mysqli_query($connection,$dbselect);//query
+//   echo mysqli_error($connection);
+  // foreach ($array as $key => $value) {
+  //   $contents = $value;
+  //   echo "<tr>";
+  //   foreach ($contents as $key => $value) {
+  //     echo "<td>$value</td>";
+  //   }
+  //   //create last column with buttons
+  // echo "<td>";
+  //   echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+  //     echo  "<i class=\"fa fa-pencil\"></i>";
+  //   echo   "</button>";
+  //   echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+  //     echo "<i class=\"fa fa-trash\"></i>";
+  //   echo "</button>";
+  // echo "</td>";
+  // echo "</tr>";
+  //echo "</tbody>";
+//   }
+// }
 //generate table in managegroups page
 function manageGroupsTable($array){
   echo "<tbody>";
@@ -158,23 +166,23 @@ function createMyTimersTable($array){
 //function for generate table in mytasks page
 function createMyTasksTable($array){
   echo "<tbody>";
-  foreach ($array as $key => $value) {
-    $contents = $value;
-    echo "<tr>";
-    foreach ($contents as $key => $value) {
-      echo "<td>$value</td>";
-    }
-    //generate last column, that contains two buttons
-    echo "<td>";
-    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-      echo "<i class=\"fa fa fa-refresh\"></i>";
-    echo "</button>";
-    echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
-      echo "<i class=\"fa fa-pencil-square-o\"></i>";
-    echo "</button>";
-    echo "</td>";
-    echo "</tr>";
-    echo "</tbody>";
-  }
+  // foreach ($array as $key => $value) {
+  //   $contents = $value;
+  //   echo "<tr>";
+  //   foreach ($contents as $key => $value) {
+  //     echo "<td>$value</td>";
+  //   }
+  //   //generate last column, that contains two buttons
+  //   echo "<td>";
+  //   echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+  //     echo "<i class=\"fa fa fa-refresh\"></i>";
+  //   echo "</button>";
+  //   echo "<button type=\"button\" class=\"btn btn-xs btn-danger\">";
+  //     echo "<i class=\"fa fa-pencil-square-o\"></i>";
+  //   echo "</button>";
+  //   echo "</td>";
+  //   echo "</tr>";
+  //   echo "</tbody>";
+  // }
 }
 ?>
