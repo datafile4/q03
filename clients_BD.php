@@ -2,10 +2,23 @@
 	<?php
 	ini_set('display_errors', 1);
 	error_reporting(E_ALL);
+
+	$con=mysqli_connect("localhost","root","root21","testing_php");
+	// Check connection
+	if (mysqli_connect_errno())
+	  {
+	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	  }
+
+	$data = mysqli_query($con,"SELECT * FROM clients");
+
+    /* Выборка результатов запроса */ 
+
+
 	?>
 <html>
 	<head>
-		<title>All Project Tasks</title>
+		<title>Clients</title>
 		<script src="jquery/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" href="css/bootstrap.css">
@@ -18,8 +31,10 @@
 	</head>
 
 	<body>
+
 		<!-- Account info -->
-		<?php include 'myAccount.php'; ?>
+		<?php include 'addClient.php';
+		include 'myAccount.php';  ?>
 		<!-- Account Info -->
 
 		<!-- NavBar -->
@@ -30,72 +45,75 @@
 		<div class="container full">
 			<!-- Section space -->
 			<div class="main">
-
 				<div class="panel-primary">
 					<div class="panel-body">
+
 						<div class=" well well-sm">
 							<div class="form-group col-md-3">
-								<input type="text" class="form-control" placeholder="Task title" aria-describedby="basic-addon1">
+								<input type="text" class="form-control" placeholder="Client ID" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Assigned to <span class="caret"></span>
+								Company Name <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Assigned to</a></li>
+									<li><a href="#">Company Name</a></li>
 								</ul>
 							</div>
 
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Project Home <span class="caret"></span>
+								E-mail <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">Project Home</a></li>
+									<li><a href="#">E-mail</a></li>
 								</ul>
 							</div>
 
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Task Status <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Task Status</a></li>
-								</ul>
-							</div>
+							<button type="submit" class="btn btn-primary">Search Clients</button>
 
-							<button type="submit" class="btn btn-primary">Search My Tasks</button>
+							<button type="button" data-toggle="modal" data-target="#addClient" class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Add new Clients</button>
 						</div>
+
 
 						<!-- Detailed section -->
 						<div class="well well-sm">
-							<div class="table-section">
+							<div class="table-responsive">
 								<table class="table table-striped">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th><a href="#">Project<i class="fa fa-sort fa-fw"></i></a></th>
-											<th><a href="#">Title<i class="fa fa-sort fa-fw"></i></a></th>
-											<th>Assigned</th>
-											<th><a href="#">Date due<i class="fa fa-sort fa-fw"></i></a></th>
-											<th>Status</th>
+											<th><a href="#">Company Name<i class="fa fa-sort fa-fw"></i></a></th>
+											<th><a href="#">Main Contact<i class="fa fa-sort fa-fw"></i></a></th>
+											<th>Telephone</th>
+											<th><a href="#">Projects<i class="fa fa-sort fa-fw"></i></a></th>
 											<th class="text-center"><i class="fa fa-bars fa-fw"></i></th>
 										</tr>
 									</thead>
 										<?php
-											$allProjectsArray = array(
-												0=>array(
-													'#'=>1,
-													'project_title'=>'Complete Website Design',
-													'task_title'=>'Convert design concept in intial PSD layout',
-													'assigned'=>'Emil Alasgarov',
-													'date_due'=>'12.09.2015',
-													'status'=>'In Progress'
-													)
-												);
-											include_once("functions.inc");
-											createAllProjectsTable($allProjectsArray);
+										include("functions.inc");
+
+										    // while( $row = mysqli_fetch_assoc($data) ){ 
+										    //     echo "$row[client_name]"; 
+										    // } 
+										$clientsArray = array(
+															0=>(array
+																('id'=>1,
+																'company_name'=>'La la la Inc.',
+																'main_contact'=>'Flex',
+																'telephone'=>'050 123 45 67',
+																'projects'=>1)
+																),
+															2=>(array
+																('id'=>4,
+																'company_name'=>'However Inc.',
+																'main_contact'=>'Nunu',
+																'telephone'=>'050 123 45 67',
+																'projects'=>5)
+																)
+															);
+										createClientsTable($clientsArray);
 										?>
 								</table>
 							</div>
