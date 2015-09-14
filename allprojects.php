@@ -71,29 +71,27 @@
 
 							<button type="submit" class="btn btn-primary">Search Projects</button>
 
-							<button type="submit" class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Add new Project</button>
+							<a href="addProject.php" type="submit" class="btn btn-success"><i class="fa fa-plus fa-fw"></i>Add new Project</a>
 						</div>
 
 						<div class="well well-sm">
 							<div class="table-responsive">
-								<table class="table table-striped">
+								<table class="table table-striped table-hover">
 									<thead>
 										<tr>
 											<th>#</th>
 											<th><a href="#">Full Name <i class="fa fa-sort fa-fw"></i></a></th>
-											<th><a href="#">Client <i class="fa fa-sort fa-fw"></i></a></th>
-											<th>Deadline</th>
-											<th><a href="#"> Progress <i class="fa fa-sort fa-fw"></i></a></th>
-											<th>Time Spent</th>
-											<th>Status</th>
+											<th class="text-center"><a href="#">Client<i class="fa fa-sort fa-fw"></i></a></th>
+											<th class="text-center">Deadline</th>
+											<th class="text-center"><a href="#"> Progress<i class="fa fa-sort fa-fw"></i></a></th>
+											<th class="text-center">Time Spent</th>
+											<th class="text-center">Status</th>
 											<th class="text-center"><i class="fa fa-bars fa-fw"></i></th>
 										</tr>
 									</thead>
 										<?php
-											$allProjectsArray = array(0=>array('#'=>1,'project_title'=>'Web Design','client_name'=>'Open Demo','deadline'=>'2015',
-											'progress'=>18,'time_spent'=>'02:45','status'=>'In Progress'));
 											include_once("functions.inc");
-											createAllProjectsTable($allProjectsArray);
+											createAllProjectsTable();
 										?>
 								</table>
 							</div>
