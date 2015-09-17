@@ -18,13 +18,7 @@
 	</head>
 
 	<body>
-		<!-- Account info -->
-		<?php include 'myAccount.php'; ?>
-		<!-- Account Info -->
 
-		<!-- NavBar -->
-		<?php include 'navbar.php'; ?>
-		<!-- //NavBar -->
 
 		<!-- Main section -->
 		<div class="container full">
@@ -101,5 +95,12 @@
 			</div>
 		</div>
 		<!-- //Main section -->
+		<!-- Account info -->
+		<?php include 'myAccount.php'; ?>
+		<!-- Account Info -->
+
+		<!-- NavBar -->
+		<?php include 'navbar.php'; ?>
+		<!-- //NavBar -->
 	</body>
 </html>

@@ -4,7 +4,7 @@
 	<title>Add New Project Page</title>
 	<script src="jquery/jquery-1.11.3.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="resources/library/ckeditor/ckeditor.js"></script>
+	<script src="ckeditor/ckeditor.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/addNewProjectPage.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">

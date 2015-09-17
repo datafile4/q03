@@ -1,34 +1,36 @@
 <?php
-	include 'connection.php';
+	//include 'connection.php';
+	error_reporting(E_ALL);
 
 	function createAllProjectsTable(){
+		session_start();
+		$dbconnect = $_SESSION['dbconnection'];
+		//global $dbconnect;
 
-	global $dbconnect;
+		$dbselect = "SELECT project_id, project_name, client_name, deadline, progress, my_time, status FROM projects";
+		$sql = mysqli_query($dbconnect,$dbselect);
 
-	$dbselect = "SELECT project_id, project_name, client_name, deadline, progress, my_time, status FROM projects";
-	$sql = mysqli_query($dbconnect,$dbselect);
-
-	while ($row = mysqli_fetch_array($sql)){
-		echo "<tr>
-			 <td style=\"vertical-align:middle\" >".$row['project_id']."</td>
-			 <td style=\"vertical-align:middle\" ><a href=\"#\">".$row['project_name']."</a></td>
-			 <td style=\"vertical-align:middle\" class=\"text-center\"><span class=\"label label-primary\">".$row['client_name']."</span></td>
-			 <td style=\"vertical-align:middle\" class=\"text-center\">".$row['deadline']."</td>
-			 <td style=\"vertical-align:middle\" class=\"text-center\">
-			 	<div class=\"progress progress-table\">
-					<div class=\"progress-bar\" style=\"width:".$row['progress']."%\">
-						<span>".$row['progress']."%</span>
+		while ($row = mysqli_fetch_array($sql)){
+			echo "<tr>
+				 <td style=\"vertical-align:middle\" >".$row['project_id']."</td>
+				 <td style=\"vertical-align:middle\" ><a href=\"#\">".$row['project_name']."</a></td>
+				 <td style=\"vertical-align:middle\" class=\"text-center\"><span class=\"label label-primary\">".$row['client_name']."</span></td>
+				 <td style=\"vertical-align:middle\" class=\"text-center\">".$row['deadline']."</td>
+				 <td style=\"vertical-align:middle\" class=\"text-center\">
+				 	<div class=\"progress progress-table\">
+						<div class=\"progress-bar\" style=\"width:".$row['progress']."%\">
+							<span>".$row['progress']."%</span>
+						</div>
 					</div>
-				</div>
-			 </td>
-			 <td class=\"text-center\" style=\"vertical-align:middle\" >".$row['my_time']."</td>
-		 	 <td class=\"text-center\" style=\"vertical-align:middle\" ><span class=\"label label-info\">".$row['status']."</span></td>
-			 <td style=\"vertical-align:middle\"  class=\"text-center\">
-				<a href=\"project_delete.php?id=".$row['project_id']."\" class=\"btn btn-xs btn-danger\">
-					<i class=\"fa fa-trash fa-fw\"></i>
-				</a>
-			 </td >
-			 </tr>";
+				 </td>
+				 <td class=\"text-center\" style=\"vertical-align:middle\" >".$row['my_time']."</td>
+			 	 <td class=\"text-center\" style=\"vertical-align:middle\" ><span class=\"label label-info\">".$row['status']."</span></td>
+				 <td style=\"vertical-align:middle\"  class=\"text-center\">
+					<a href=\"project_delete.php?id=".$row['project_id']."\" class=\"btn btn-xs btn-danger\">
+						<i class=\"fa fa-trash fa-fw\"></i>
+					</a>
+				 </td >
+				 </tr>";
 	}
 }
 
