@@ -19,14 +19,7 @@
 
 	<body>
 
-		<!-- Account info -->
-		<?php include 'addClient.php';
-		include 'myAccount.php';  ?>
-		<!-- Account Info -->
 
-		<!-- NavBar -->
-		<?php include 'navbar.php'; ?>
-		<!-- //NavBar -->
 
 		<!-- Main section -->
 		<div class="container full">
@@ -90,6 +83,14 @@
 				</div>
 			</div>
 		</div>
+		<!-- Account info -->
+		<?php include 'addClient.php';
+		include 'myAccount.php';  ?>
+		<!-- Account Info -->
+
+		<!-- NavBar -->
+		<?php include 'navbar.php'; ?>
+		<!-- //NavBar -->
 		<!-- //Main section -->
 	</body>
 </html>

@@ -10,10 +10,6 @@
   //connection to db
 
   $dbconnect = mysqli_connect($host, $username, $pass,$dbname);
-  if ($dbconnect){
-    header("Location: index.php");
-  }else {
-    echo "ERROR!!!";
-  }
+
 
 ?>

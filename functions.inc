@@ -1,30 +1,24 @@
 <?php
 	//include 'connection.php';
 	error_reporting(E_ALL);
+	include("connection.php"); //file with connection
+	include 'resources/dbqueries.inc';
+	include 'resources/arrays.inc';
 
 	function createAllProjectsTable(){
-		session_start();
-		$dbconnect = $_SESSION['dbconnection'];
-		//global $dbconnect;
-
-		$dbselect = "SELECT project_id, project_name, client_name, deadline, progress, my_time, status FROM projects";
-		$sql = mysqli_query($dbconnect,$dbselect);
-
+		global $dbconnect;
+		//$dbselect = "SELECT * FROM projects INNER JOIN user_projects ON projects.project_id=user_projects.project_id INNER JOIN clients ON clients.client_id=clients.client_id";
+		global $selectAllProjects;
+		global $projectStatus;
+		$sql = mysqli_query($dbconnect,$selectAllProjects);
 		while ($row = mysqli_fetch_array($sql)){
 			echo "<tr>
 				 <td style=\"vertical-align:middle\" >".$row['project_id']."</td>
 				 <td style=\"vertical-align:middle\" ><a href=\"#\">".$row['project_name']."</a></td>
 				 <td style=\"vertical-align:middle\" class=\"text-center\"><span class=\"label label-primary\">".$row['client_name']."</span></td>
 				 <td style=\"vertical-align:middle\" class=\"text-center\">".$row['deadline']."</td>
-				 <td style=\"vertical-align:middle\" class=\"text-center\">
-				 	<div class=\"progress progress-table\">
-						<div class=\"progress-bar\" style=\"width:".$row['progress']."%\">
-							<span>".$row['progress']."%</span>
-						</div>
-					</div>
-				 </td>
-				 <td class=\"text-center\" style=\"vertical-align:middle\" >".$row['my_time']."</td>
-			 	 <td class=\"text-center\" style=\"vertical-align:middle\" ><span class=\"label label-info\">".$row['status']."</span></td>
+
+			 	 <td class=\"text-center\" style=\"vertical-align:middle\" ><span class=\"label label-info\">".$projectStatus[$row['status']]."</span></td>
 				 <td style=\"vertical-align:middle\"  class=\"text-center\">
 					<a href=\"project_delete.php?id=".$row['project_id']."\" class=\"btn btn-xs btn-danger\">
 						<i class=\"fa fa-trash fa-fw\"></i>
@@ -35,32 +29,31 @@
 }
 
 	//function for generate table in myprojects page
-	function createMyProjectsTable($array){
-		echo "<tbody>";
-
-		foreach ($array as $key => $value) {//key is user id
-			$contents = $value;//contents - fields of db
-
-			echo "<tr>";
-
-			foreach ($contents as $key => $value) { //value  - content of field
-				if($key=='progress'){
-					echo "<td>
-							<div class=\"progress\">
-								<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"$value\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: $value%;\">
-									$value%
+	function createMyProjectsTable(){
+		global $dbconnect;
+		global $selectUserProjects;
+		while ($row = mysqli_fetch_array($sql)){
+			$sql = mysqli_query($dbconnect,$selectUserProjects);
+				echo "<tbody>";
+				echo "<tr>";
+				echo "<td style=\"vertical-align:middle\" >".$row['project_id']."</td>";
+				//TODO: will get from database. Not working
+					if($key=='progress'){
+						echo "<td>
+								<div class=\"progress\">
+									<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"$value\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: $value%;\">
+										$value%
+									</div>
 								</div>
-							</div>
-							</td>";
-					}else {
-						if($key=='client'){
-							echo "<td><span class=\"label label-primary\">$value</span></td>";
-						}else{
-							echo "<td>$value</td>";
+								</td>";
+						}else {
+							if($key=='client'){
+								echo "<td><span class=\"label label-primary\">$value</span></td>";
+							}else{
+								echo "<td>$value</td>";
+							}
 						}
-						}
-			}
-			echo "</tr>";
+				echo "</tr>";
 		}
 		echo "</tbody>";
 	}

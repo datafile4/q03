@@ -77,8 +77,8 @@
 											<th><a href="#">Full Name <i class="fa fa-sort fa-fw"></i></a></th>
 											<th class="text-center"><a href="#">Client<i class="fa fa-sort fa-fw"></i></a></th>
 											<th class="text-center">Deadline</th>
-											<th class="text-center"><a href="#"> Progress<i class="fa fa-sort fa-fw"></i></a></th>
-											<th class="text-center">Time Spent</th>
+											<!-- <th class="text-center"><a href="#"> Progress<i class="fa fa-sort fa-fw"></i></a></th> -->
+											<!-- <th class="text-center">Time Spent</th> -->
 											<th class="text-center">Status</th>
 											<th class="text-center"><i class="fa fa-bars fa-fw"></i></th>
 										</tr>

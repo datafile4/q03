@@ -58,8 +58,9 @@
 									</thead>
 										<?php
 											include_once("functions.inc");
-											$myProjects = array(0=>array('#'=>0,'project'=>'Web-design','client'=>'Open client','deadline'=>'30-04-2015','progress' =>50,'my-time'=>'20:43:10','my_tasks'=>'9','status'=>'In progress'));
-											createMyProjectsTable($myProjects);
+											//TODO: get from database, not working now
+										 	//$myProjects = array(0=>array('#'=>0,'project'=>'Web-design','client'=>'Open client','deadline'=>'30-04-2015','progress' =>50,'my-time'=>'20:43:10','my_tasks'=>'9','status'=>'In progress'));
+											createMyProjectsTable();
 										?>
 								</table>
 							</div>
