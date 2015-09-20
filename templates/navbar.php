@@ -15,7 +15,7 @@ echo '		<nav class="navbar navbar-default navbar-fixed-top">
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li><a href="index.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+							<li><a href="dashboard.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
 							<li><a href="allprojects.php"><i class="fa fa-folder-open fa-fw"></i>All Projects <span class="badge progress-bar-info">4</span></a></li>
 							<li><a href="clients.php"><i class="fa fa-user fa-fw"></i>Clients <span class="badge progress-bar-info">4</span></a></li>
 							<li><a href="teammembers.php"><i class="fa fa-users fa-fw"></i>Team Members</a></li>

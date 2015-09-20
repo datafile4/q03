@@ -30,22 +30,20 @@
 	}
 	function checkLogin($email,$pass){//function for check email and password
 		$tmpDBH = $this->DBH;
-		$STH = $tmpDBH->query('SELECT email, password FROM users');//STH is Statement Handle
+		$STH = $tmpDBH->query('SELECT user_email, user_password FROM users');//STH is Statement Handle
 		$STH->setFetchMode(PDO::FETCH_ASSOC); //set fetch mode
-		$flag = NULL;
+		$flag = false;
 		while ($row=$STH->fetch()) {//checking login and pass for each row
-			if($row['email']==$email && $row['password']==$pass){ //checking
+			if($row['user_email']==$email && $row['user_password']==$pass){ //checking
 				$this->flag=true; //user did login
 				$this->currentUser = $email;//who did login
 				session_start();//start session. LOL
 				$_SESSION['username'] = $email;
-				echo "that's work!";
-			} else {
-				$this->flag = false;
-				echo "faiil";
-			}
+				break;
 		}
 	}
+	return $this->flag;
+}
 }
 
 
