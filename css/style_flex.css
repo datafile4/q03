@@ -1,92 +1,26 @@
 .main {
 	/*margin:5px 5px 5px 200px;*/
-	margin-top:5px;
-	margin-right:5px;
-	margin-bottom:5px;
+	margin-top:60px;
 }
-.myMargin {
-	margin-top:5px;
-
-}
-.panel-height {
-	    height: 55px;
-}
-.face {
-		font-size: 35px;
+.full {
+	height:100%;
 }
 
-/*top menu*/
-.topMenu {
-	/*background-color: #BDBDBD;*/
-	/*height: 50px;*/
-}
 
-.logo {
-	/*background-color: green;*/
-	/*height: 50px;*/
-}
-
-.userMenu {
-	/*background-color: lime;*/
-	/*height: 40px;*/
-}
-/*top menu*/
-
-/*welcome menu*/
-.welcomeTxt {
-	/*background-color: #D4D4D4;*/
-	/*height: 50px;*/
-}
-
-.userPhoto {
-	/*background-color: pink;*/
-	/*height: 40px;*/
-}
-
-.privelige {
-	/*background-color: pink;*/
-	/*height: 40px;*/
-}
-/*welcome menu*/
-
-/*welcome menu*/
-.review {
-	/*background-color: yellow;*/
-	height: 115px;
-}
-.rewIco {
-	font-size: 35px;
-}
-
-.thumb {
-	background-color: #B0CCFF;
-	/*height: 90px;*/
-}
-/*welcome menu*/
-
-/*detail menu*/
-
-.detailed {
-	/*background-color: green;*/
-	/*height: 600px;*/
-}
-.detail{
-	/*background-color: blue;*/
-	/*height: 600px;*/
-}
 
 .myTaskStatus{
-	/*background-color: lime;*/
 	height: 555px;
 
 }
 #task2 {
 	height:490px;
+	padding-right: 5px;
 	overflow:auto;
 }
 
 #taskList2 {
  	height: 430px;
+ 	padding-right: 5px;
     margin-bottom: 0;
     overflow: auto;
 }
@@ -96,8 +30,13 @@
 }
 
 .taskOne{
-	/*background-color: pink;*/
 	height: 555px;
+}
+
+
+.progress-table {
+    margin-bottom:0px;
+
 }
 
 /*detail menu*/
@@ -106,15 +45,19 @@
 
 /* new_changes */
 
-.mySideBar {
+/*.mySideBar {
 	position: fixed;
 	width: 15%;
-/*	 height:96.6%;*/
+	 height:96.6%;
 	margin:5px;
-	/*line-height: 50px;*/
+	line-height: 50px;
 
 
+}*/
+
+/*.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
-.boxWidth {
-	width:100%;
-}
+*/

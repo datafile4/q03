@@ -57,3 +57,17 @@
 .loginFooter {
   top:187px;
 }
+ /*NUNU*/
+
+
+ .textProjectInfo {
+  width:700px;
+}
+.addNewProjectButton {
+  float:right;
+  margin-right:20px;
+}
+.descriptionSize{
+  position:relative;
+  top:150px;
+}
